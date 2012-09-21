@@ -17,7 +17,7 @@
 )
 
 (defvar lat/storedlocations '(("home" . [38.007 -122.273])
-                            ("work" . [37.498 -122.376])
+                            ("work" . [37.498 -122.376]))
   "This variable holds the coordinates of your stored locations"
 )
 
@@ -163,7 +163,4 @@
     (cancel-timer lat/timer))
   (setq lat/timer nil))
 
-;; (setq lat/current-location [0 0])
-;; (lat/timer-run-once)
-;; (lat/timer-start)
-;; (lat/timer-stop)
+(provide 'org-latitude)
