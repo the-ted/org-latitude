@@ -95,11 +95,12 @@
 (defun lat/makeagenda ()
   "Make the agenda corresponding to all of the locations that have changed"
   (let ((locations (concat (lat/matchinglocations) "/" lat/matchingTODO)))
-    (org-add-agenda-custom-command
-     '("X" tags (eval locations)))
-    (org-batch-agenda "X")
-    )
-)
+    (if (string= (lat/matchinglocations) "+")
+	nil
+	(progn (org-add-agenda-custom-command
+		'("X" tags (eval locations)))
+	       (org-batch-agenda "X")))))
+
 
 
 (defun lat/testcurrent ()
@@ -154,7 +155,7 @@
   (when (timerp lat/timer)
     (cancel-timer lat/timer))
   (setq lat/timer
-          (run-with-timer 15 15 'lat/timer-callback)))
+          (run-with-timer 60 15 'lat/timer-callback)))
 
 ;; stop function
 (defun lat/timer-stop ()
