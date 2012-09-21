@@ -27,4 +27,6 @@ like the following in your .emacs:
 
 (setq lat/matchingTODO "TODO")
 
+(lat/timer-start) ;; This starts the latitude notifier.
+
 To add more locations to be searched for, change the lat/storedlocations variable.
