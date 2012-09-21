@@ -20,8 +20,11 @@ To use org-latitude, add the .el file to your load path and put something
 like the following in your .emacs:
 
 (require 'org-latitude)
+
 (setq lat/userid "---Insert USERID here---")
+
 (setq lat/email "---Insert where you want the notification emails sent----")
+
 (setq lat/matchingTODO "TODO")
 
-To add more locations to be searched for, change lat/storedlocations variable.
+To add more locations to be searched for, change the lat/storedlocations variable.
