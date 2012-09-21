@@ -18,8 +18,6 @@
 
 (defvar lat/storedlocations '(("home" . [38.007 -122.273])
                             ("work" . [37.498 -122.376])
-)
-
   "This variable holds the coordinates of your stored locations"
 )
 
